@@ -28,8 +28,10 @@ end
 # note on above: because the whole thing (tweet_as_array.map all the way to end) is a big method call that returns an array. Because the return value is an array, you can call join on the end of it
 
       
-def bulk_tweet_shortener(tweet_array)
-  
+def bulk_tweet_shortener(tweets)
+  tweets.map do |tweet|
+    word_substituter(tweet)
+  end
 end
 
 
