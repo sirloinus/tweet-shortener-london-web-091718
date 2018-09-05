@@ -15,10 +15,20 @@ end
 def word_substituter(tweet)
   tweet_as_array = tweet.split(' ')
   tweet_as_array.map do |word|
-    if word == dictionary[]
+    if dictionary.keys.include?(word)
+      #replace word with value from dictionary hash 
+      word = dictionary[word]
+    else 
+      word
+    end
+    #then convert tweet_as_array back to a string 
+    tweet_as_array.join(' ')
+  end  
+  #return shoretened tweet 
+  
 end
 
-
+      
 def bulk_tweet_shortener(tweet_array)
   
 end
