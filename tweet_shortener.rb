@@ -16,9 +16,10 @@ end
 def word_substituter(tweet)
   tweet_as_array = tweet.split(' ')
   tweet_as_array.map do |word|
-    if dictionary.keys.include?(word.downcase)
+    if dictionary.keys.include?(word.downcase)   
+                    # ^^ downcase because keys in hash are all lowercase 
        word = dictionary[word.downcase]       
-                    #replace word with value from dictionary hash 
+                    # ^^ replace word with value from dictionary hash 
     else 
       word
     end 
